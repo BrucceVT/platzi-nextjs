@@ -3,7 +3,7 @@ import Navbar from "components/Navbar";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div>
+    <div className=" bg-slate-600">
       <Navbar />
       {children}
       <footer>
