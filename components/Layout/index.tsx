@@ -1,16 +1,18 @@
-import React from "react";
-import Navbar from "components/Navbar";
+import React, { PropsWithChildren } from 'react'
 
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return (
-    <div className=" bg-slate-600">
-      <Navbar />
-      {children}
-      <footer>
-        <p>soy un footer</p>
-      </footer>
-    </div>
-  );
-};
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
-export default Layout;
+type LayoutProps = {
+  children?: React.ReactNode
+}
+
+const Layout = ({ children }: LayoutProps) => (
+  <>
+    <Navbar />
+    <main className="container mx-auto px-4 py-8">{children}</main>
+    <Footer />
+  </>
+)
+
+export default Layout
